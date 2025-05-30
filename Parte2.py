@@ -2,6 +2,7 @@ import math
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
+import time
 from scipy.stats import cauchy
 
 def generar_uniforme(a, c, m, semilla, n):
@@ -23,7 +24,8 @@ def main():
     a = 1664525
     c = 1013904223
     m = 2**32
-    semilla = 123456789
+    #semilla = 123456789
+    semilla = int(time.time())
     n = 100
 
     varContUniforme = generar_uniforme(a, c, m, semilla, n)
